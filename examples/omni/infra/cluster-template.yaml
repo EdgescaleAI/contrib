@@ -33,6 +33,8 @@ machines:
 ---
 kind: Machine
 name: 4c4c4544-0037-5a10-8030-c8c04f4a5132
-locked: false
 patches:
   - file: patches/gpu-worker-patch.yaml
+systemExtensions:
+    - nonfree-kmod-nvidia
+    - nvidia-container-toolkit
