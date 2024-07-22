@@ -36,5 +36,5 @@ name: 4c4c4544-0037-5a10-8030-c8c04f4a5132
 patches:
   - file: patches/gpu-worker-patch.yaml
 systemExtensions:
-    - nonfree-kmod-nvidia
+    - nvidia-open-gpu-kernel-modules
     - nvidia-container-toolkit
