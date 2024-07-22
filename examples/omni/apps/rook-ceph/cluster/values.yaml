@@ -1,0 +1,4 @@
+rook-ceph-cluster:
+  spec:
+    mon:
+      count: 2

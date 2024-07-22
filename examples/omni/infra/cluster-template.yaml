@@ -24,6 +24,17 @@ patches:
 ---
 kind: Workers
 name: workers
-machineClass:
-  name: omni-contrib-workers
-  size: unlimited
+machines:
+  - 4c4c4544-0037-5a10-8030-c8c04f4a5132
+  - 00000000-0000-0000-0000-ac1f6b58ada8
+# machineClass:
+#   name: omni-contrib-workers
+#   size: unlimited
+---
+kind: Machine
+name: 4c4c4544-0037-5a10-8030-c8c04f4a5132
+locked: false
+install:
+  disk: /dev/vda
+patches:
+  - file: patches/gpu-worker-patch.yaml
