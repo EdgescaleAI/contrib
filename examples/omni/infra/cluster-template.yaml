@@ -12,7 +12,7 @@ patches:
 ---
 kind: ControlPlane
 machineClass:
-  name: omni-contrib-controlplane
+  name: omni-controlplane
   size: 1
 patches:
   - name: cilium
@@ -23,15 +23,15 @@ patches:
     file: patches/monitoring.yaml
 ---
 kind: Workers
-name: workers
-machines:
-  - 4c4c4544-0037-5a10-8030-c8c04f4a5132
-  - 00000000-0000-0000-0000-ac1f6b58ada8
-# machineClass:
-#   name: omni-contrib-workers
-#   size: unlimited
+name: workers-cpu
+machineClass:
+  name: omni-cpu-workers
+  size: 1
 ---
-kind: Machine
-name: 4c4c4544-0037-5a10-8030-c8c04f4a5132
+kind: Workers
+name: workers-gpu
+machineClass:
+  name: omni-gpu-workers
+  size: 1
 patches:
   - file: patches/gpu-worker-patch.yaml
